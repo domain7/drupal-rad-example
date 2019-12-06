@@ -1,13 +1,21 @@
 
+# RAD: Really Awesome Drupal 🏄‍♂️
+
+A collection of our best Drupal work to be copied to other projects and possibly into separate modules or profile.
+
+### Have a module idea?
+
+Throw it in to `docroot/modules/custom` for now.  Eventually we will try to hook it up to composer
+
+Your module name should be `rad_[name]`
+
 
 # TODO
 
-- add shared theme
+- add `rad_design` theme
+- featurize some base configuration with features module into `rad_profile`
 
 
-# My Project
-
-A brief description of My Project.
 
 ## Using This Template
 
