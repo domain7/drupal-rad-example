@@ -1,0 +1,23 @@
+uuid: 101d1587-4fac-4444-83ca-7d3711a6cc82
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_with_menu
+label: 'Title with Menu'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent:url:path]/[node:title]'
+selection_criteria:
+  2496c09f-e063-42cf-862e-77dfc4eb814a:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2496c09f-e063-42cf-862e-77dfc4eb814a
+selection_logic: and
+weight: -5
+relationships: {  }

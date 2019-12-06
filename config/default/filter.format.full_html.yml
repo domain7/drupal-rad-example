@@ -1,0 +1,50 @@
+uuid: 4ab23715-bad7-4a72-a726-cff2e0501ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+  module:
+    - linkit
+    - media
+name: 'Full HTML'
+format: full_html
+weight: -10
+filters:
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: full
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <s> <sup> <sub> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class="button "> <table class="no-border site-table"> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="intro ">'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true

@@ -1,0 +1,14 @@
+uuid: 34a63dfd-900a-48d3-9747-a05dd2e5b5a8
+langcode: en
+status: true
+dependencies: null
+id: image
+label: Image
+description: 'Images are used throughout the site and this is the best place to add and store them'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name
