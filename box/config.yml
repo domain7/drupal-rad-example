@@ -3,8 +3,8 @@
 # @see https://github.com/geerlingguy/drupal-vm/blob/master/default.config.yml
 
 # Update the hostname to the local development environment hostname.
-vagrant_hostname: local.shared.com
-vagrant_machine_name: shared
+vagrant_hostname: local.rad.com
+vagrant_machine_name: rad
 
 # Set the IP address so it doesn't conflict with other Drupal VM instances.
 vagrant_ip: 192.168.202.140
@@ -14,21 +14,21 @@ vagrant_box: geerlingguy/drupal-vm
 workspace: /root
 
 # Set drupal_site_name to the project's human-readable name.
-drupal_site_name: "Shared Base"
+drupal_site_name: "Rad Example Base"
 
 # Provide the path to the project root to Vagrant.
 vagrant_synced_folders:
   # Set the local_path for the first synced folder to `.`.
   - local_path: .
     # Set the destination to the Acquia Cloud subscription machine name.
-    destination: /var/www/shared
+    destination: /var/www/rad
     type: nfs
 
 drupal_build_composer_project: false
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/shared"
-drupal_core_path: "/var/www/shared/docroot"
-ssh_home: /var/www/shared
+drupal_composer_install_dir: "/var/www/rad"
+drupal_core_path: "/var/www/rad/docroot"
+ssh_home: /var/www/rad
 
 # Multisite installations should configure additional domains here.
 apache_vhosts:

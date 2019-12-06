@@ -12,8 +12,8 @@
 project:
   machine_name: shared
   # Used for enforcing correct git commit msg syntax.
-  prefix: SHARE
-  human_name: 'Shared Base'
+  prefix: RAD
+  human_name: 'Rad Example of Drupal implementation'
   profile:
     name: minimal
   # This will be used as the local uri for all developers.
@@ -40,6 +40,11 @@ drush:
   default_alias: '${drush.aliases.local}'
 # An array of modules to be enabled or uninstalled automatically in local, ci,
 # and deploy contexts.
+cm:
+  allow-overrides: true
+  strategy: config-split
+  core:
+    install_from_config: true
 modules:
   local:
     enable:
