@@ -12,10 +12,10 @@
 project:
   machine_name: shared
   # Used for enforcing correct git commit msg syntax.
-  prefix: BLT
-  human_name: 'BLTed 10'
+  prefix: SHARE
+  human_name: 'Shared Base'
   profile:
-    name: lightning
+    name: minimal
   # This will be used as the local uri for all developers.
   local:
     protocol: http
@@ -60,17 +60,17 @@ modules:
       - acquia_connector
       - shield
     uninstall: {  }
-  test:
-    enable:
-      - acquia_connector
-      - shield
-    uninstall:
-      - devel
-      - views_ui
-  prod:
-    enable:
-      - acquia_connector
-      - shield
-    uninstall:
-      - devel
-      - views_ui
+#   test:
+#     enable:
+#       - acquia_connector
+#       - shield
+#     uninstall:
+#       - devel
+#       - views_ui
+#   prod:
+#     enable:
+#       - acquia_connector
+#       - shield
+#     uninstall:
+#       - devel
+#       - views_ui
