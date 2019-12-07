@@ -23,7 +23,8 @@ project:
 # Configuration settings for new git repository.
 git:
   default_branch: master
-  remotes: {  }
+  remotes:
+    - 'domain7rad@svn-3516.devcloud.hosting.acquia.com:domain7rad.git'
 deploy:
   # When manually deploying a tag, also tag the source repository.
   tag_source: true
@@ -40,11 +41,16 @@ drush:
   default_alias: '${drush.aliases.local}'
 # An array of modules to be enabled or uninstalled automatically in local, ci,
 # and deploy contexts.
+cloud:
+  appId: c0fe0982-7ad3-4088-8432-a6f5ed4f2234
 cm:
   allow-overrides: true
   strategy: config-split
   core:
     install_from_config: true
+command-hooks:
+  frontend-reqs: {}
+  frontend-assets: {}
 modules:
   local:
     enable:
