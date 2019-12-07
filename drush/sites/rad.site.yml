@@ -4,3 +4,36 @@ local:
     host: local.rad.com
     user: vagrant
     ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+# Application 'domain7rad', environment 'dev'.
+dev:
+  root: /var/www/html/domain7rad.dev/docroot
+  ac-site: domain7rad
+  ac-env: dev
+  ac-realm: devcloud
+  uri: domain7radgospegbfek.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@domain7rad.dev'
+    root: /mnt/gfs/domain7rad.dev/livedev/docroot
+  host: domain7radgospegbfek.ssh.devcloud.acquia-sites.com
+  user: domain7rad.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'domain7rad', environment 'test'.
+test:
+  root: /var/www/html/domain7rad.test/docroot
+  ac-site: domain7rad
+  ac-env: test
+  ac-realm: devcloud
+  uri: domain7rad2ms3eib3co.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@domain7rad.test'
+    root: /mnt/gfs/domain7rad.test/livedev/docroot
+  host: domain7rad2ms3eib3co.ssh.devcloud.acquia-sites.com
+  user: domain7rad.test
+  paths:
+    drush-script: drush9
+
+
+
